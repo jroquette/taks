@@ -19,8 +19,14 @@ from django.urls import path, include
 from user.urls import user_urls
 from task.urls import task_urls
 
+# documentation
+from tasks.documentation import schema_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include(user_urls)),
     path('tasks/', include(task_urls)),
+    # Documentation
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0)),
 ]
