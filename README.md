@@ -1,4 +1,4 @@
-# Task Project
+# Task Backend Project
 
 This application is an example of implementing the Django and Django Rest framework. The idea behind this project is to serve as a basic model, to work on some concepts of Django and Django Rest Framework, as back-end system to Angular as front-end.
 
