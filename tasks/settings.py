@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     # My apps
     'user',
     'task',
+
+    # Documentation
+    'rest_framework_swagger',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
