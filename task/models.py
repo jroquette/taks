@@ -22,3 +22,7 @@ class Task(models.Model):
     def __str__(self):
         """Get name of task by default"""
         return self.name
+
+    def user(self):
+        """Client data"""
+        return self.user_id
