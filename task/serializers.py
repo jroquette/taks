@@ -8,9 +8,10 @@ from user.serializers import UserSerializer
 
 class TaskSerializer(serializers.ModelSerializer):
     """Serializer Class of Task"""
-    user_id = UserSerializer(read_only=True)
+    user = UserSerializer(read_only=True)
 
     class Meta:
         """Meta Class"""
         model = Task
-        fields = '__all__'
+        fields = ['name', 'description', 'status', 'created_at', 'user', 'user_id']
+        extra_kwargs = {'user_id': {'write_only': True}}
