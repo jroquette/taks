@@ -8,14 +8,13 @@ class Task(models.Model):
     """Model of Task"""
 
     STATUS_TYPE = (
-        (0, 'Pending'),
-        (1, 'Done')
+        ('Pending', 'Pending'),
+        ('Done', 'Done')
     )
 
     id = models.AutoField(primary_key=True)
     name = models.TextField(max_length=255)
-    description = models.TextField(null=True, blank=True)
-    status = models.PositiveIntegerField(choices=STATUS_TYPE)
+    status = models.TextField(choices=STATUS_TYPE)
     created_at = models.DateTimeField(auto_now_add=True)
     user_id = models.ForeignKey(User, null=True, blank=True, related_name='user', on_delete=models.CASCADE)
 
@@ -24,5 +23,5 @@ class Task(models.Model):
         return self.name
 
     def user(self):
-        """Client data"""
+        """User data"""
         return self.user_id
