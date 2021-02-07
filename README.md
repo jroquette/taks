@@ -24,6 +24,10 @@ To run application:
 python manage.py runserver
 ```
 
+## Frontend server
+
+If you want running with a backend server, run the api from [Tasks Frontend](https://github.com/jroquette/tasks-frontend)
+
 ## Authors
 [**Jose Henrique Roquette**](https://github.com/jroquette)
 
